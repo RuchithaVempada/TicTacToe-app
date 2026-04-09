@@ -7,6 +7,14 @@
 </head>
 <body>
 
+<!-- 🎵 Background Music -->
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 🎊 Celebration Container -->
+<div id="celebration"></div>
+
 <!-- 1️⃣ LOGO SCREEN -->
 <div id="screen-logo" class="screen">
     <h1 class="logo">🎮 TIC TAC TOE KING</h1>
@@ -49,8 +57,8 @@
         <div class="cell" data-index="8"></div>
     </div>
 
-    <button onclick="restartGame()">Restart</button>
-    <button onclick="showScreen('screen-menu')">Quit</button>
+    <button onclick="confirmRestart()">Restart</button>
+    <button onclick="confirmQuit()">Quit</button>
 </div>
 
 <script src="mainactivity.js"></script>
