@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TicTacToe King</title>
+    <link rel="stylesheet" href="activity.css">
+</head>
+<body>
+
+<!-- 1️⃣ LOGO SCREEN -->
+<div id="screen-logo" class="screen">
+    <h1 class="logo">🎮 TIC TAC TOE KING</h1>
+</div>
+
+<!-- 2️⃣ INTRO SCREEN -->
+<div id="screen-intro" class="screen hidden">
+    <h2>GET READY...</h2>
+</div>
+
+<!-- 3️⃣ MENU -->
+<div id="screen-menu" class="screen hidden">
+    <button onclick="startGame('friend')">👥 Play with Friend</button>
+    <button onclick="startGame('robot')">🤖 Play with Robot</button>
+    <button onclick="showScreen('screen-lobby')">🌐 Play Online</button>
+</div>
+
+<!-- 4️⃣ LOBBY -->
+<div id="screen-lobby" class="screen hidden">
+    <h3>Create / Join Room</h3>
+    <input type="text" id="roomCode" placeholder="Enter Room Code">
+    <button onclick="createRoom()">Create Room</button>
+    <button onclick="joinRoom()">Join Room</button>
+    <button onclick="showScreen('screen-menu')">Back</button>
+</div>
+
+<!-- 5️⃣ GAME -->
+<div id="screen-game" class="screen hidden">
+    <h2 id="status">Player X's Turn</h2>
+
+    <div class="grid">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+    </div>
+
+    <button onclick="restartGame()">Restart</button>
+    <button onclick="showScreen('screen-menu')">Quit</button>
+</div>
+
+<script src="mainactivity.js"></script>
+</body>
+</html>
